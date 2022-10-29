@@ -1,149 +1,176 @@
+/*==FONT IMPORT==*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
+/*==GENERAL STYLING==*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+/*==CONTENT==*/
 section{
     position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     overflow: hidden;
 }
+
+/*==BACKGROUND CIRCLE==*/
 .circle{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #e51e2a;
+    background-color: #e51e2a;
     clip-path: circle(50% at bottom right);
 }
+
+/*==HEADER==*/
 header{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 30px 85px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 header .logo{
     position: relative;
-    max-width: 150px;
+    left: 13px;
+    width: 170px;
 }
-header .navegation ul{
+header .navi ul{
     position: relative;
     display: flex;
 }
-header .navegation  li{
+header .navi li{
     list-style: none;
 }
-header .navegation li a{
-    display: inline-block;
+header .navi li a{
     color: #fff;
-    font-weight: 500;
+    display: inline-block;
     text-decoration: none;
-    font-size: 19px;
+    font-weight: 500;
+    font-size: 15px;
+    border-bottom: transparent 2px solid;
     margin-left: 100px;
+    transition: all 0.3s;
 }
-.content{
+header .navi li a:hover{
+    border-bottom: #e51e2a 3px solid;
+}
+
+/*==MAIN CONTENT==*/
+.container{
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.content .text{
+.container .text{
     position: relative;
-    max-width: 600px;
+    max-width: 500px;
     margin-right: 20px;
 }
-.content .text h2{
+.container .text h2{
     color: #fff;
-    font-size: 3em;
+    font-size: 2.8em;
     margin-bottom: 10px;
     line-height: 2.5em;
     font-weight: 700;
 }
-.content .text h2 span{
+.container .text h2 span{
     font-size: 3.5em;
     color: #e51e2a;
 }
-.content .text p{
+.container .text p{
     color: #fff;
 }
-.content .text a{
+.container .text a{
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 35px;
     padding: 10px 25px;
     background: #e51e2a;
     color: #fff;
     font-weight: 500;
-    letter-spacing: 1px;
     text-decoration: none;
+    letter-spacing: 1px;
     border-radius: 40px;
     transition: 0.3s ease-in-out;
 }
-.content .text a:hover{
+.container .text a:hover{
     transform: translateY(-10px);
 }
+
+/*==ICONS SOCIAL NETWORKS==*/
 .icons{
     position: absolute;
-    bottom: 40px;
-    left: 100px;
+    bottom: 35px;
+    left: 48px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 .icons li{
     list-style: none;
 }
 .icons li a{
     display: inline-block;
-    margin-left: 45px;
-    background: #222;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    transition:  0.3s ease-in-out;
+    background: #222;
+    margin-left: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
 }
 .icons li a:hover{
     background: #e51e2a;
     transform: translateY(-10px);
 }
 .icons li a img{
-    filter: invert(1);
     transform: scale(0.5);
+    filter: invert(1);
 }
-.boxImg{
+
+/*==PRODUCTS==*/
+.boximg{
     position: absolute;
     right: 0;
-    bottom: -40px;
+    bottom: 0;
+    margin-right: 15px;
 }
-.boxImg img{
-    width: 200px;
+.boximg img{
+    height: 290px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
-.boxImg .img1{
-    transform: rotate(-15deg)
+.boximg .img1{
+    height: 450px;
+    transform: rotate(-15deg);
 }
-.boxImg .img2{
-    transform: rotate(5deg)
+.boximg .img2{
+    transform: rotate(5deg);
 }
-.boxImg .img3{
-    transform: rotate(15deg)
+.boximg .img3{
+    transform: rotate(-5deg);
 }
-.boxImg .img4{
-    transform: rotate(-15deg)
+.boximg .img4{
+    transform: rotate(-15deg);
+}
+.boximg .img1:hover, .boximg .img2:hover, .boximg .img3:hover, .boximg .img4:hover{
+    transform: translateY(-20px);
 }
